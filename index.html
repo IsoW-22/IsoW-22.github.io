@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Uchen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
+    <title>Calculator</title>
+    <link rel="icon" href="https://img.icons8.com/ios-glyphs/30/000000/calculator.png" type="image/icon type">
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <h1>Calculator</h1>
+            <ul>
+                <li><img class="header-icon mz" src="https://img.icons8.com/material-rounded/24/undefined/minus-math--v1.png"/></li>
+                <li><img class="header-icon mx" src="https://img.icons8.com/windows/24/undefined/maximize-button.png"/></li>
+                <li><img class="header-icon clz" src="https://img.icons8.com/ios/50/undefined/delete-sign--v1.png"/></li>
+            </ul>
+        </div>
+        <div id="result">
+            <div class="upper-row">
+                <div class="standard">
+                    <div class="dropdown">
+                        <button onclick="myFunction()" id="menu"><img class="icon dropbtn menu-class"
+                                src="https://img.icons8.com/material-outlined/24/000000/menu--v2.png" /></button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="#" id="green" onclick="changeTheme('green')">Green</a>
+                            <a href="#" id="blue" onclick="changeTheme('blue')">Blue</a>
+                            <a href="#" id="dark" onclick="changeTheme('dark')">Dark</a>
+                            <a href="#" id="light" onclick="changeTheme('default')">Light</a>
+                        </div>
+                    </div>
+                    <p class="standard-p">Standard</p>
+                </div>
+                <div class="history-icon-container">
+                    <img class="history-icon"
+                    src="https://img.icons8.com/external-others-amoghdesign/24/000000/external-history-multimedia-solid-30px-others-amoghdesign.png"/>
+                </div>
+            </div>
+            <p class="zero">0</p>
+            <div class="small">
+                <div class="main-sml-btns">
+                    <button class="sml-btns" disabled>MC</button>
+                    <button class="sml-btns" disabled>MR</button>
+                    <button class="sml-btns on">M+</button>
+                    <button class="sml-btns on">M-</button>
+                    <button class="sml-btns on">MS</button>
+                </div>
+                <div class="single-btn">
+                    <button class="sml-btns sn" disabled>M<img class="arrow" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABmJLR0QA/wD/AP+gvaeTAAAAbUlEQVQYlaWOMQqFMBBEn5JN9ZscaW9gLR7OA9j9yioX2DbXSGUhZAubzycg2DgwzTyYGXirASDn/AkhSA/cvanqMQKIyArU3r+MESClNAPfrmBvrS3/CYBSSqy1bkB090lVz9shMxMzkxt40gUoAiI1vvmaBwAAAABJRU5ErkJggg=="
+                    /></button>
+                </div>
+            </div>
+        </div>
+        <div id="history">
+            <div class="upper-history">
+                <p class="bordered">
+                    History
+                </p>
+                <p class="memory">
+                    Memory
+                </p>
+            </div>
+            <div class="lower-history">
+                <p>
+                    There's no history yet
+                </p>
+            </div>
+        </div>
+        <div id="buttons">
+            <button class="big four semi"><img class="percent" src="https://img.icons8.com/ios-glyphs/25/undefined/percentage.png"/></button>
+            <button class="big chars semi">CE</button>
+            <button class="big chars semi">C</button>
+            <button class="big semi"><img class="delete" src="https://img.icons8.com/windows/30/undefined/clear-symbol.png"/></button>
+            <button class="big semi"><img class="divide" src="https://img.icons8.com/small/30/undefined/divide.png"/></button>
+            <button class="big three semi"><img class="root" src="https://img.icons8.com/ios/30/undefined/square-root.png"/></button>
+            <button class="big numbers main">7</button>
+            <button class="big numbers main">8</button>
+            <button class="big numbers main">9</button>
+            <button class="big semi"><img class="multiply" src="https://img.icons8.com/ios/30/undefined/multiply.png"/></button>
+            <button class="big chars two semi">&#x1D465;&#xb2</button>
+            <button class="big numbers main">4</button>
+            <button class="big numbers main">5</button>
+            <button class="big numbers main">6</button>
+            <button class="big semi"><img class="minus" src="https://img.icons8.com/ios/30/undefined/minus-math.png"/></button>
+            <button class="big chars bthide semi">&#x1D465;&#xb3;</button>
+            <button class="big numbers main">1</button>
+            <button class="big numbers main">2</button>
+            <button class="big numbers main">3</button>
+            <button class="big semi"><img class="plus" src="https://img.icons8.com/ios/30/undefined/plus-math.png"/></button>
+            <button class="big one semi"><img class="one-x" src="assets\pictures\1x.png" alt="1/x"/></button>
+            <button class="big semi"><img class="plus-minus" src="https://img.icons8.com/fluency-systems-regular/28/undefined/plus-minus.png"/></button>
+            <button class="big numbers main">0</button>
+            <button class="big numbers semi">.</button>
+            <button class="big semi"><img class="equal" src="https://img.icons8.com/ios/30/undefined/equal-sign.png"/></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
