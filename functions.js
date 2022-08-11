@@ -316,6 +316,13 @@ function myFunction2() {
 let x = window.matchMedia("(max-width: 500px)");
 x.addEventListener("change",myFunction2);
 
+//---------------------overflow part
+
+var elem = document.getElementById("currentText");
+elem.focus();
+elem.scrollLeft = elem.scrollWidth;
+
+
 // --------------------------------------------------------------------
 // history and memory part
 
