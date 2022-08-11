@@ -193,6 +193,7 @@ button:hover:enabled {
     border: none;
     width: 32%;
     height: 100%;
+    background-color: var(--semi-buttons);
 }
 
 .memories-div button:hover {
