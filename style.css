@@ -221,7 +221,7 @@ button:hover:enabled {
     position: absolute;
     top: 10px;
     left: 50px;
-    background-color: var(--bg);
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -229,7 +229,7 @@ button:hover:enabled {
 
 .delete-history:hover {
     cursor: pointer;
-    background-color: var(--hover-gray);
+    background-color: var(--bg);
 }
 
 .trash-div {
