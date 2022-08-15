@@ -11,6 +11,7 @@ class Calculator {
     }
 
     inputNumbers = (number) => {
+        this.prevOp = null;
         this.prevNumber = null;
         const displayValue = this.displayValue;
         const waitingForSecondNumber = this.waitingForSecondNumber;
