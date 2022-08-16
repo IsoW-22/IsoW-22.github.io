@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<script>
+    sessionStorage.clear();
+    sessionStorage.setItem("current div", "content");
+    sessionStorage.setItem("item-0", "content");
+    sessionStorage.setItem("content-items", "[]");
+</script>
+
+<body>
+    <div id="container">
+        <div id="nav">
+            <div class="hide">
+                <div class="upper-nav">
+                    <div class="back">
+                        <img src="https://img.icons8.com/nolan/30/back.png" />
+                    </div>
+                    <div class="welcome-small">
+                        <p>welcome</p>
+                        <p><span class="pointer user">new user</span></p>
+                    </div>
+                </div>
+
+                <script>
+                        if (localStorage.getItem("name") == null) {
+                            const name = prompt("enter your name", "new user");
+                            if (name == null || name == "") {
+                                document.querySelector(".user").innerHTML = "new user";
+                            } else {
+                                localStorage.setItem("name", name);
+                                document.querySelector(".user").innerHTML = name;
+                            }
+                        } else {
+                            const newName = localStorage.getItem("name");
+                            document.querySelector(".user").innerHTML = newName;
+                        }
+                </script>
+
+                <div class="lower-nav">
+                    <ul class="new-ul">
+                        <li class="day"><span class="sun">🌞</span><p> Day</p></li>
+                        <li class="importants"><span class="star">⭐️</span><p class="li">Important</p></li>
+                    </ul>
+                </div>
+                <div class="empty"></div>
+                <div class="lists">
+                    <ul class="lists-items">
+                        <li id="item-0" class="list-item" style="border-left: 5px groove rgb(236, 8, 84);">
+                            Main list
+                        </li>
+                        <li class="create-list"><img src="https://img.icons8.com/emoji/20/000000/plus-emoji.png" />Create List</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="header">
+            <div class="background-less">
+                <div class="menu">
+                    <img src="https://img.icons8.com/ios-filled/30/000000/menu--v2.png" />
+                </div>
+                <div class="dateAndDay">
+                    <div class="current-part">
+                        <p>My Day</p>
+                    </div>
+                    <div id="date">
+                    
+                    </div>
+                    <div class="list">
+                        <p class="list-name">
+                            <span class="pointer">Main list</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="for-background">
+                <div style="display: none;">
+                    <img src="theme.png" alt="theme" class="theme-change">
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div class="list2">
+                <p class="list-name">
+                    <span class="pointer">Untitled list</span>
+                </p>
+            </div>
+            <div class="items">
+                <div class="create" id="create">
+                    <img
+                        src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/25/000000/external-Green-Plus-miscellaneous-kiranshastry-lineal-color-kiranshastry.png" />
+                        <p>Create</p>
+                </div>
+                <div class="create-imp" id="create-imp">
+                    <img
+                        src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/25/000000/external-Green-Plus-miscellaneous-kiranshastry-lineal-color-kiranshastry.png" />
+                    <p>Create important task</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const today = new Date();
+        const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const monthDay = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        let day = weekday[today.getDay()];
+        let month = monthDay[today.getMonth()];
+        const day2 = today.getDate();
+        document.getElementById("date").innerHTML = `${day}, ${month} ${day2}`;
+    </script>
+
+    <script src="menu.js"></script>
+    <script src="functions.js"></script>
+</body>
+</html>
