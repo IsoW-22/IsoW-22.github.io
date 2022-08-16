@@ -39,6 +39,7 @@
     grid-area: nav;
     background-color: var(--body);
     border-right: 1px solid var(--hover);
+    overflow: auto;
 }
 
 #header {
